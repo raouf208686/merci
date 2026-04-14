@@ -7,81 +7,81 @@
     <link rel="manifest" href="manifest.json">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
-        :root { 
-            --bg: #fff1f5;       
-            --card: #ffffff;     
-            --text: #5e1c3e;     
-            --accent: #5e1c3e;   
-            --border: #f8e1e7;   
-            --gold-accent: #c5a059; 
+        :root {
+            --bg: #fff1f5;
+            --card: #ffffff;
+            --text: #5e1c3e;
+            --accent: #5e1c3e;
+            --border: #f8e1e7;
+            --gold-accent: #c5a059;
             --input-text: #5e1c3e;
         }
 
         [data-theme="dark"] {
-            --bg: #2a0a1a;       
-            --card: #3a1a2a;     
-            --text: #fff1f5;     
-            --accent: #ffb6c1;   
-            --border: #5e1c3e;   
-            --gold-accent: #ffcc66; 
+            --bg: #2a0a1a;
+            --card: #3a1a2a;
+            --text: #fff1f5;
+            --accent: #ffb6c1;
+            --border: #5e1c3e;
+            --gold-accent: #ffcc66;
             --input-text: #ffffff;
         }
 
-        body { 
-            font-family: 'Inter', sans-serif; 
+        body {
+            font-family: 'Inter', sans-serif;
             background-color: var(--bg);
             background-image: radial-gradient(var(--border) 1px, transparent 1px);
             background-size: 20px 20px;
-            color: var(--text); 
-            margin: 0; 
-            padding: 10px; 
-            display: flex; 
-            justify-content: center; 
+            color: var(--text);
+            margin: 0;
+            padding: 10px;
+            display: flex;
+            justify-content: center;
             transition: 0.3s;
             min-height: 100vh;
         }
 
-        .app { width: 100%; max-width: 480px; position: relative; z-index: 1; }
-        
-        .header { text-align: center; margin-bottom: 25px; }
-        .header h1 { font-family: 'Playfair Display', serif; font-size: 32px; margin: 0; color: var(--text); font-weight: 700; text-transform: uppercase; }
-        .darja { font-size: 11px; color: var(--accent); font-weight: 700; letter-spacing: 3px; text-transform: uppercase; margin-top: 5px; display: block;}
+       .app { width: 100%; max-width: 480px; position: relative; z-index: 1; }
 
-        .section { background: var(--card); border: 1px solid var(--border); padding: 22px; border-radius: 25px; margin-bottom: 15px; box-shadow: 0 8px 30px rgba(0,0,0,0.05); }
-        .section-title { font-size: 11px; font-weight: 700; text-transform: uppercase; color: var(--accent); letter-spacing: 1.5px; margin-bottom: 18px; display: block; }
+       .header { text-align: center; margin-bottom: 25px; }
+       .header h1 { font-family: 'Playfair Display', serif; font-size: 32px; margin: 0; color: var(--text); font-weight: 700; text-transform: uppercase; }
+       .darja { font-size: 11px; color: var(--accent); font-weight: 700; letter-spacing: 3px; text-transform: uppercase; margin-top: 5px; display: block;}
 
-        .card { padding: 20px; border-radius: 18px; background: rgba(94, 28, 62, 0.03); margin-bottom: 12px; cursor: pointer; border: 1px solid var(--border); transition: 0.2s; color: var(--text); }
-        .card.selected { border: 2px solid var(--accent); background: var(--accent); color: #ffffff !important; transform: scale(1.02); }
-        .card.selected * { color: #ffffff !important; } 
-        
-        .price-badge { background: var(--gold-accent); color: #1a040a !important; padding: 5px 10px; border-radius: 10px; font-size: 11px; font-weight: 800; }
+       .section { background: var(--card); border: 1px solid var(--border); padding: 22px; border-radius: 25px; margin-bottom: 15px; box-shadow: 0 8px 30px rgba(0,0,0,0.05); }
+       .section-title { font-size: 11px; font-weight: 700; text-transform: uppercase; color: var(--accent); letter-spacing: 1.5px; margin-bottom: 18px; display: block; }
 
-        .total-box { background: var(--accent); color: var(--gold-accent) !important; padding: 30px; border-radius: 35px; text-align: center; margin-top: 25px; box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2); }
-        .total-box span, .total-box small { color: var(--gold-accent) !important; }
+       .card { padding: 20px; border-radius: 18px; background: rgba(94, 28, 62, 0.03); margin-bottom: 12px; cursor: pointer; border: 1px solid var(--border); transition: 0.2s; color: var(--text); }
+       .card.selected { border: 2px solid var(--accent); background: var(--accent); color: #ffffff!important; transform: scale(1.02); }
+       .card.selected * { color: #ffffff!important; }
 
-        input, textarea { 
-            width: 100%; 
-            padding: 14px; 
-            border-radius: 12px; 
-            border: 1px solid var(--border); 
-            background: var(--card); 
-            color: var(--input-text); 
-            box-sizing: border-box; 
-            font-family: inherit; 
-            margin-top: 8px; 
-            outline: none; 
+       .price-badge { background: var(--gold-accent); color: #1a040a!important; padding: 5px 10px; border-radius: 10px; font-size: 11px; font-weight: 800; }
+
+       .total-box { background: var(--accent); color: var(--gold-accent)!important; padding: 30px; border-radius: 35px; text-align: center; margin-top: 25px; box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2); }
+       .total-box span,.total-box small { color: var(--gold-accent)!important; }
+
+        input, textarea {
+            width: 100%;
+            padding: 14px;
+            border-radius: 12px;
+            border: 1px solid var(--border);
+            background: var(--card);
+            color: var(--input-text);
+            box-sizing: border-box;
+            font-family: inherit;
+            margin-top: 8px;
+            outline: none;
         }
 
-        .btn { width: 100%; padding: 16px; border: none; border-radius: 16px; font-weight: 700; cursor: pointer; text-transform: uppercase; font-size: 12px; margin-top: 10px; transition: 0.3s; display: block; text-decoration: none; text-align: center; }
-        .btn-wa { background: #25D366; color: white; }
-        .btn-ig { background: linear-gradient(45deg, #f09433, #dc2743, #bc1888); color: white; }
-        .btn-top { background: var(--card); color: var(--text); border: 1px solid var(--border); padding: 10px 18px; border-radius: 14px; font-size: 11px; font-weight: 700; cursor: pointer; }
+       .btn { width: 100%; padding: 16px; border: none; border-radius: 16px; font-weight: 700; cursor: pointer; text-transform: uppercase; font-size: 12px; margin-top: 10px; transition: 0.3s; display: block; text-decoration: none; text-align: center; }
+       .btn-wa { background: #25D366; color: white; }
+       .btn-ig { background: linear-gradient(45deg, #f09433, #dc2743, #bc1888); color: white; }
+       .btn-top { background: var(--card); color: var(--text); border: 1px solid var(--border); padding: 10px 18px; border-radius: 14px; font-size: 11px; font-weight: 700; cursor: pointer; }
 
-        .admin-panel { display: none; background: var(--card); padding: 20px; border-radius: 25px; border: 2px solid var(--accent); margin-bottom: 20px; }
-        .admin-block { background: rgba(94, 28, 62, 0.05); padding: 15px; border-radius: 15px; margin-bottom: 10px; border: 1px solid var(--border); }
-        .btn-del { background: #ff4d4d; color: white; border: none; padding: 8px; border-radius: 8px; cursor: pointer; font-size: 10px; margin-top: 10px; width: 100%; }
+       .admin-panel { display: none; background: var(--card); padding: 20px; border-radius: 25px; border: 2px solid var(--accent); margin-bottom: 20px; }
+       .admin-block { background: rgba(94, 28, 62, 0.05); padding: 15px; border-radius: 15px; margin-bottom: 10px; border: 1px solid var(--border); }
+       .btn-del { background: #ff4d4d; color: white; border: none; padding: 8px; border-radius: 8px; cursor: pointer; font-size: 10px; margin-top: 10px; width: 100%; }
 
-        .note-chef { border-left: 4px solid var(--accent); padding: 15px; font-size: 13px; background: var(--card); margin-bottom: 20px; font-style: italic; border-radius: 0 15px 15px 0; color: var(--text); opacity: 0.9; }
+       .note-chef { border-left: 4px solid var(--accent); padding: 15px; font-size: 13px; background: var(--card); margin-bottom: 20px; font-style: italic; border-radius: 0 15px 15px 0; color: var(--text); opacity: 0.9; }
     </style>
 </head>
 <body>
@@ -175,7 +175,6 @@
         if(saved) db = JSON.parse(saved);
     }
 
-    // Fonction de rendu principal (ne pas appeler pendant l'input admin)
     function renderApp() {
         document.getElementById('v_name').innerText = db.n;
         document.getElementById('v_msg').innerText = db.m;
@@ -185,7 +184,7 @@
         db.f.forEach((x, i) => {
             lf.innerHTML += `<div class="card ${x.s?'selected':''}" onclick="sel('f',${i})">
                 <div style="display:flex; justify-content:space-between; align-items:center;"><b>${x.n}</b><span class="price-badge">${(parseInt(db.b)+parseInt(x.p))} DA/P</span></div>
-                ${x.d ? `<div style="font-size:11px; opacity:0.8; margin-top:8px;">${x.d}</div>` : ''}</div>`;
+                ${x.d? `<div style="font-size:11px; opacity:0.8; margin-top:8px;">${x.d}</div>` : ''}</div>`;
         });
 
         const le = document.getElementById('list_e'); le.innerHTML = '';
@@ -196,7 +195,6 @@
         calc();
     }
 
-    // Rendu spécifique de l'admin pour éviter les bugs de clavier
     function renderAdmin() {
         document.getElementById('a_name').value = db.n;
         document.getElementById('a_wa').value = db.w;
@@ -226,23 +224,23 @@
     }
 
     function sel(t, i) { if(t==='f') db.f.forEach((x,idx)=>x.s=(idx===i)); else db.e[i].s=!db.e[i].s; save(); renderApp(); }
-    
+
     function del(t, i) { db[t].splice(i,1); save(); renderApp(); renderAdmin(); }
-    
-    function add(t) { 
-        if(t==='f') db.f.push({n:"Nouvelle Saveur", d:"", p:0, s:false}); 
-        else db.e.push({n:"Nouvel Extra", p:0, s:false}); 
-        save(); renderApp(); renderAdmin(); 
+
+    function add(t) {
+        if(t==='f') db.f.push({n:"Nouvelle Saveur", d:"", p:0, s:false});
+        else db.e.push({n:"Nouvel Extra", p:0, s:false});
+        save(); renderApp(); renderAdmin();
     }
 
-    function upd() { 
-        db.n = document.getElementById('a_name').value; 
-        db.w = document.getElementById('a_wa').value; 
-        db.i = document.getElementById('a_ig').value.replace('@',''); 
-        db.b = document.getElementById('a_base').value; 
-        db.m = document.getElementById('a_msg').value; 
-        db.r = document.getElementById('a_rem').value; 
-        save(); 
+    function upd() {
+        db.n = document.getElementById('a_name').value;
+        db.w = document.getElementById('a_wa').value;
+        db.i = document.getElementById('a_ig').value.replace('@','');
+        db.b = document.getElementById('a_base').value;
+        db.m = document.getElementById('a_msg').value;
+        db.r = document.getElementById('a_rem').value;
+        save();
         document.getElementById('v_name').innerText = db.n;
         document.getElementById('v_msg').innerText = db.m;
         document.getElementById('v_rem').innerText = db.r;
@@ -260,17 +258,17 @@
     }
 
     function send(mode) {
-        const d = document.getElementById('date').value; if(!d) return alert("Veuillez choisir une date !");
+        const d = document.getElementById('date').value; if(!d) return alert("Veuillez choisir une date!");
         const f = db.f.find(x=>x.s);
         const ex = db.e.filter(x=>x.s).map(x=>x.n);
         const note = document.getElementById('note').value;
         const txt = `*DEVIS ${db.n}*\n📅 Date: ${d}\n📏 ${document.getElementById('parts').value} parts (${document.getElementById('etages').value} ét.)\n👑 Saveur: ${f.n}\n✨ Extras: ${ex.join(', ') || 'Aucun'}\n📝 Note: ${note || 'Aucune'}\n💰 TOTAL: ${document.getElementById('total').innerText} DA`;
-        
+
         if(mode==='wa') {
             window.open(`https://wa.me/${db.w}?text=${encodeURIComponent(txt)}`);
         } else {
             navigator.clipboard.writeText(txt).then(() => {
-                alert("Devis copié ! Collez-le sur Instagram.");
+                alert("Devis copié! Collez-le sur Instagram.");
                 window.open(`https://instagram.com/${db.i}/`);
             });
         }
@@ -279,10 +277,10 @@
     function copyLink() {
         const dataStr = btoa(unescape(encodeURIComponent(JSON.stringify(db))));
         const link = window.location.origin + window.location.pathname + "?data=" + dataStr;
-        navigator.clipboard.writeText(link); alert("LIEN CLIENT PRÊT !");
+        navigator.clipboard.writeText(link); alert("LIEN CLIENT PRÊT!");
     }
 
-    function toggleAdmin() { 
+    function toggleAdmin() {
         const p = document.getElementById('admin');
         if(p.style.display === 'block') {
             p.style.display = 'none';
@@ -293,10 +291,10 @@
             }
         }
     }
-    
+
     function save() { localStorage.setItem('cakepro_v3', JSON.stringify(db)); }
     function toggleTheme() { document.body.dataset.theme = (document.body.dataset.theme==='dark')?'':'dark'; }
-    
+
     window.onload = renderApp;
 </script>
 
